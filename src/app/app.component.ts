@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+declare const saveDocument: any;
+declare const loadDocument: any;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-editor-app';
+	title = 'my-editor-app';
+	
+	onClickSave() {
+		saveDocument();
+	}
+
+	onClickLoad() {
+		loadDocument();
+	}
 }
